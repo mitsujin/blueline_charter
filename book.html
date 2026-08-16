@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Now | Blue Line Charter</title>
+  <meta name="description" content="Request a boat charter booking with Blue Line Charter, Seychelles. We'll confirm availability by email or WhatsApp." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="brand-mark">&#9875;</span> Blue Line Charter</a>
+      <ul class="nav-links">
+        <li><a href="index.html#boats">Our Boats</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="book.html" class="btn btn-primary">Book Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <h2>Book Now</h2>
+        <p>Tell us your preferred date, time and boat. We'll confirm availability by email or WhatsApp.</p>
+      </div>
+
+      <div class="booking-wrap">
+        <!--
+          Netlify Forms: this form is detected at deploy time by scanning
+          the static HTML for name + data-netlify="true". After the first
+          deploy, go to Site settings > Forms > Notifications and add an
+          email notification pointing at the owner's inbox, or submissions
+          will be captured silently with nobody emailed.
+        -->
+        <form
+          name="booking"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/thanks.html"
+        >
+          <input type="hidden" name="form-name" value="booking" />
+          <p class="honeypot-field">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-row">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-row form-row-split">
+            <div>
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="boat">Which Boat</label>
+            <select id="boat" name="boat" required>
+              <option value="">Select a boat</option>
+              <option value="[BOAT 1 NAME]">[BOAT 1 NAME]</option>
+              <option value="[BOAT 2 NAME]">[BOAT 2 NAME]</option>
+              <option value="Not sure">Not sure — recommend one</option>
+            </select>
+          </div>
+
+          <div class="form-row form-row-split">
+            <div>
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div>
+              <label for="time">Preferred Trip Time</label>
+              <select id="time" name="time" required>
+                <option value="">Select a time</option>
+                <option value="8:00 AM">8:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row form-row-split">
+            <div>
+              <label for="adults">Adults</label>
+              <input type="number" id="adults" name="adults" min="1" value="1" required />
+            </div>
+            <div>
+              <label for="children">Children</label>
+              <input type="number" id="children" name="children" min="0" value="0" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" placeholder="Anything else we should know?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Request Booking</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>&copy; <span id="year"></span> Blue Line Charter, Seychelles</div>
+      <div class="footer-social">
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
