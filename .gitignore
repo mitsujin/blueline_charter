@@ -1,2 +1,8 @@
 .DS_Store
 .netlify/
+
+# Source material and notes, kept local (Netlify publishes the repo root)
+photos/
+design-src/
+notes.rtf
+blue-line-charter-site.html

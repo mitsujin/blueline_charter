@@ -3,101 +3,445 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blue Line Charter | Boat Charters in Seychelles</title>
-  <meta name="description" content="Blue Line Charter offers private boat trips in Seychelles. Two boats, custom charters, book online." />
+  <title>Blue Line Charter | Private Boat Trips from Mahé, Seychelles</title>
+  <meta name="description" content="Private boat excursions from Mahé, Seychelles, planned around your group: Sainte Anne and Baie Ternay marine parks, the Mahé coast, fishing, sunset cruises and day trips to Praslin and La Digue. Two boats, prices per boat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="has-hero">
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html"><span class="brand-mark">&#9875;</span> Blue Line Charter</a>
+      <a class="brand" href="index.html"><img src="images/logo-light.png" alt="Blue Line Charter" /></a>
       <ul class="nav-links">
-        <li><a href="index.html#boats">Our Boats</a></li>
+        <li><a href="index.html#excursions">Excursions</a></li>
+        <li><a href="index.html#boats">Boats</a></li>
+        <li><a href="index.html#rates">Prices</a></li>
         <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="book.html" class="btn btn-primary">Book Now</a></li>
+        <li class="nav-cta"><a href="book.html" class="btn btn-primary btn-sm">Book Now</a></li>
       </ul>
     </div>
   </header>
 
+  <!-- Hero: muted looping drone footage, poster frame shown until it plays -->
   <section class="hero">
+    <video
+      class="hero-media"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="images/hero-poster.jpg"
+      data-src-wide="images/hero-wide.mp4"
+      data-src-tall="images/hero-tall.mp4"
+      data-poster-tall="images/hero-poster-tall.jpg"
+      aria-label="Aerial footage of Birdy Birdy cruising over turquoise water"
+    >
+      <source src="images/hero-wide.mp4" type="video/mp4" />
+    </video>
+    <img
+      class="hero-media hero-still"
+      alt=""
+      data-src-wide="images/hero-still-wide.jpg"
+      data-src-tall="images/hero-still-tall.jpg"
+    />
+
     <div class="container">
-      <h1>Private Boat Charters in Seychelles</h1>
-      <p>[PLACEHOLDER TAGLINE — e.g. "Snorkeling, island hopping and fishing trips aboard our two boats. Tell us your dates and we'll take care of the rest."]</p>
+      <span class="pill-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7fd3f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"></circle><path d="M12 7v14"></path><path d="M5 12h14"></path><path d="M4 15a8 8 0 0 0 16 0"></path></svg>
+        Private excursions &middot; Mahé, Seychelles
+      </span>
+      <h1>Private boat excursions from Mahé</h1>
+      <p>Snorkel Sainte Anne or Baie Ternay, go fishing, or spend the day on Praslin and La Digue. Half or full day, planned around your group.</p>
       <div class="hero-actions">
-        <a href="book.html" class="btn btn-primary">Book Now</a>
-        <a href="index.html#boats" class="btn btn-ghost">See Our Boats</a>
+        <a href="book.html" class="btn btn-primary">Check dates</a>
+        <a href="index.html#excursions" class="btn btn-ghost">See excursions</a>
       </div>
+    </div>
+  </section>
+
+  <section id="excursions">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Excursions</div>
+        <h2>Where we go</h2>
+        <p>Every excursion is private and planned around your group, so tell us where you'd like to go. Half days stay around Mahé; full days on Birdy Birdy can go further. If you'd rather not plan it, these are the routes we run most often. All leave from Marine Charter, Mahé.</p>
+      </div>
+
+      <div class="excursion-grid">
+        <article class="excursion">
+          <h3>Sainte Anne Marine Park</h3>
+          <ul class="excursion-meta">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>Half day or full day</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17.5h20"></path><path d="M4 17.5 6 11h12l2 6.5"></path><path d="M12 11V6"></path><path d="M9 6h6"></path></svg>Either boat for half days; full days on Birdy Birdy</li>
+          </ul>
+          <p>Snorkel the reefs around Sainte Anne, Moyenne, Round and Cerf islands. The full day adds time ashore and lunch cooked on board.</p>
+          <div class="excursion-foot">
+            <span class="price-label">From</span>
+            <span class="price">€585</span>
+            <a href="book.html?excursion=ste-anne" class="excursion-link">Book</a>
+          </div>
+        </article>
+        <article class="excursion">
+          <h3>Baie Ternay Marine Park</h3>
+          <ul class="excursion-meta">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>Half day or full day</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17.5h20"></path><path d="M4 17.5 6 11h12l2 6.5"></path><path d="M12 11V6"></path><path d="M9 6h6"></path></svg>Either boat for half days; full days on Birdy Birdy</li>
+          </ul>
+          <p>A sheltered bay on Mahé's north-west tip, protected as a marine park. Calm water and good snorkelling close to the reef.</p>
+          <div class="excursion-foot">
+            <span class="price-label">From</span>
+            <span class="price">€720</span>
+            <a href="book.html?excursion=ternay" class="excursion-link">Book</a>
+          </div>
+        </article>
+        <article class="excursion">
+          <h3>Around Mahé</h3>
+          <ul class="excursion-meta">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>Half day or full day</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17.5h20"></path><path d="M4 17.5 6 11h12l2 6.5"></path><path d="M12 11V6"></path><path d="M9 6h6"></path></svg>Either boat for half days; full days on Birdy Birdy</li>
+          </ul>
+          <p>Go north or south along the coast and stop at the beaches and reefs that suit the day. The full day includes lunch cooked on board.</p>
+          <div class="excursion-foot">
+            <span class="price-label">From</span>
+            <span class="price">€720</span>
+            <a href="book.html?excursion=mahe" class="excursion-link">Book</a>
+          </div>
+        </article>
+        <article class="excursion">
+          <h3>Praslin &amp; La Digue</h3>
+          <ul class="excursion-meta">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>Full day, 08:00 to about 17:00</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17.5h20"></path><path d="M4 17.5 6 11h12l2 6.5"></path><path d="M12 11V6"></path><path d="M9 6h6"></path></svg>Birdy Birdy &middot; up to 14 guests</li>
+          </ul>
+          <p>Cruise past Anse Lazio with a snorkel stop, then spend the afternoon on La Digue at Anse Source d'Argent. Or go ashore on Praslin to see Vallée de Mai.</p>
+          <details class="excursion-day">
+            <summary>See the day</summary>
+            <p class="excursion-day-option">Coastal cruise (recommended)</p>
+            <ol>
+              <li><b>08:00</b> Leave Marine Charter, Mahé.</li>
+              <li><b>Morning</b> Cruise along Praslin past Anse Georgette and Anse Lazio, and stop to swim and snorkel near Anse Lazio.</li>
+              <li><b>Late morning</b> On to La Digue to see Anse Source d'Argent and explore by bike or buggy.</li>
+              <li><b>15:30</b> Leave La Digue; back in Mahé around 17:00.</li>
+            </ol>
+            <p class="excursion-day-option">Praslin on land</p>
+            <ol>
+              <li><b>08:00</b> Leave Marine Charter, Mahé.</li>
+              <li><b>Morning</b> Taxi on Praslin to Vallée de Mai and Anse Lazio.</li>
+              <li><b>Afternoon</b> By boat to La Digue to explore and have lunch.</li>
+            </ol>
+            <p class="excursion-day-note">Snacks and drinks on board. Not included: entrance fees, taxis, bike or buggy hire and lunch. Times and stops depend on the weather and sea.</p>
+          </details>
+          <div class="excursion-foot">
+            <span class="price-label">From</span>
+            <span class="price">€1,300</span>
+            <a href="book.html?boat=birdy-birdy&amp;excursion=islands" class="excursion-link">Book</a>
+          </div>
+        </article>
+        <article class="excursion">
+          <h3>Fishing</h3>
+          <ul class="excursion-meta">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>Half day or full day</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17.5h20"></path><path d="M4 17.5 6 11h12l2 6.5"></path><path d="M12 11V6"></path><path d="M9 6h6"></path></svg>Birdy Birdy &middot; up to 10 guests</li>
+          </ul>
+          <p>Head out on Birdy Birdy, which is rigged for fishing. The full day includes lunch cooked on board.</p>
+          <div class="excursion-foot">
+            <span class="price-label">From</span>
+            <span class="price">€780</span>
+            <a href="book.html?boat=birdy-birdy&amp;excursion=fishing" class="excursion-link">Book</a>
+          </div>
+        </article>
+        <article class="excursion">
+          <h3>Sunset cruise</h3>
+          <ul class="excursion-meta">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>Half day, late afternoon</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17.5h20"></path><path d="M4 17.5 6 11h12l2 6.5"></path><path d="M12 11V6"></path><path d="M9 6h6"></path></svg>Either boat</li>
+          </ul>
+          <p>A shorter cruise off Mahé to watch the sun go down from the water.</p>
+          <div class="excursion-foot">
+            <span class="price-label">From</span>
+            <span class="price">€720</span>
+            <a href="book.html?excursion=sunset" class="excursion-link">Book</a>
+          </div>
+        </article>
+      </div>
+
     </div>
   </section>
 
   <section id="boats">
     <div class="container">
+
       <div class="section-heading">
-        <h2>Our Boats</h2>
-        <p>Two boats available for private charter — choose the one that fits your trip.</p>
+        <div class="eyebrow">Boats</div>
+        <h2>Two boats</h2>
+        <p>Both are booked privately with a skipper. Birdy Birdy is the bigger boat, with a kitchen on board: it does the full days, fishing and Praslin &amp; La Digue. Trident is smaller and quicker, with a covered cabin, and runs half days around Mahé.</p>
       </div>
-      <div class="boats-grid">
 
-        <div class="boat-card">
-          <img src="images/boat-1-placeholder.jpg" alt="[BOAT 1 NAME] photo" />
-          <div class="boat-card-body">
-            <h3>[BOAT 1 NAME]</h3>
-            <p>[Short description — trip types, e.g. snorkeling, fishing, island hopping]</p>
-            <div class="boat-meta">
-              <span>Up to [CAPACITY] guests</span>
-              <span>[BOAT TYPE]</span>
-            </div>
-            <div class="boat-price">[PRICE] <small>/ [half day, full day, etc.]</small></div>
-            <div class="placeholder-note">Placeholder content — replace with real boat details, photo and price.</div>
+      <div class="boat-list">
+
+      <article class="boat-card" id="birdy-birdy">
+
+        <div class="boat-gallery">
+          <div class="boat-gallery-main">
+            <img src="images/boat-main.jpg" alt="Birdy Birdy at anchor, seen from the waterline" />
+            <span class="gallery-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7fd3f2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+              Fishing &amp; island hopping
+            </span>
+          </div>
+          <div class="boat-gallery-thumbs">
+            <img src="images/boat-guests.jpg" alt="Guests on Birdy Birdy's stern steps" loading="lazy" decoding="async" />
+            <img src="images/boat-snorkelling.jpg" alt="Snorkelling beside Birdy Birdy" loading="lazy" decoding="async" />
           </div>
         </div>
 
-        <div class="boat-card">
-          <img src="images/boat-2-placeholder.jpg" alt="[BOAT 2 NAME] photo" />
-          <div class="boat-card-body">
-            <h3>[BOAT 2 NAME]</h3>
-            <p>[Short description — trip types, e.g. snorkeling, fishing, island hopping]</p>
-            <div class="boat-meta">
-              <span>Up to [CAPACITY] guests</span>
-              <span>[BOAT TYPE]</span>
+        <div class="boat-detail">
+
+          <div>
+            <h3>Birdy Birdy</h3>
+            <div class="boat-place">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5c6b76" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Boards at Marine Charter, Mahé</span>
             </div>
-            <div class="boat-price">[PRICE] <small>/ [half day, full day, etc.]</small></div>
-            <div class="placeholder-note">Placeholder content — replace with real boat details, photo and price.</div>
+          </div>
+
+          <div class="spec-chips">
+            <span class="chip">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="3.2"></circle><path d="M22 20v-2a4 4 0 0 0-3-3.85"></path><path d="M16 4.15A4 4 0 0 1 16 11.7"></path></svg>
+              Up to 14 guests
+            </span>
+            <span class="chip">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17.5h20"></path><path d="M4 17.5 6 11h12l2 6.5"></path><path d="M12 11V6"></path><path d="M9 6h6"></path></svg>
+              Power catamaran &middot; flybridge
+            </span>
+            <span class="chip">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+              Every excursion
+            </span>
+            <span class="chip">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"></circle><path d="M12 7v14"></path><path d="M5 12h14"></path><path d="M4 15a8 8 0 0 0 16 0"></path></svg>
+              Captain &amp; crew included
+            </span>
+          </div>
+
+          <p class="boat-blurb">Power catamaran for up to 14 guests, with a shaded flybridge and a net foredeck to lie out on. It's set up for fishing and it's the boat for excursions to Praslin and La Digue.</p>
+
+          <div class="boat-footer">
+            <div>
+              <div class="price-label">From</div>
+              <div class="price">€585 <small>/ half day</small></div>
+            </div>
+            <div class="boat-cta">
+              <a href="book.html?boat=birdy-birdy" class="btn btn-primary">
+                Book Birdy Birdy
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+              <div class="note">No payment online. We confirm by WhatsApp.</div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="boat-card" id="trident">
+
+        <div class="boat-gallery">
+          <div class="boat-gallery-main">
+            <img src="images/trident-main.jpg" alt="Trident, a white hardtop cruiser with a navy hull stripe" />
+            <span class="gallery-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7fd3f2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+              Covered cabin
+            </span>
+          </div>
+          <div class="boat-gallery-thumbs">
+            <img src="images/trident-beach.jpg" alt="Trident anchored off a beach" loading="lazy" decoding="async" />
+            <img src="images/trident-moored.jpg" alt="Trident moored against granite rocks" loading="lazy" decoding="async" />
           </div>
         </div>
 
+        <div class="boat-detail">
+
+          <div>
+            <h3>Trident</h3>
+            <div class="boat-place">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5c6b76" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Boards at Marine Charter, Mahé</span>
+            </div>
+          </div>
+
+          <div class="spec-chips">
+            <span class="chip">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="3.2"></circle><path d="M22 20v-2a4 4 0 0 0-3-3.85"></path><path d="M16 4.15A4 4 0 0 1 16 11.7"></path></svg>
+              Up to 14 guests
+            </span>
+            <span class="chip">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17.5h20"></path><path d="M4 17.5 6 11h12l2 6.5"></path><path d="M12 11V6"></path><path d="M9 6h6"></path></svg>
+              8.8 m &middot; Bestboat 880 hardtop
+            </span>
+            <span class="chip">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+              Half days around Mahé
+            </span>
+            <span class="chip">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"></circle><path d="M12 7v14"></path><path d="M5 12h14"></path><path d="M4 15a8 8 0 0 0 16 0"></path></svg>
+              Twin 115 HP Yamaha
+            </span>
+          </div>
+
+          <p class="boat-blurb">8.8 m Bestboat hardtop with twin 115 HP Yamahas, for up to 14 guests. The cabin keeps you out of the sun and spray, and it's quick between snorkel stops around Mahé. Drinks and snacks on board; no cooking.</p>
+
+          <div class="boat-footer">
+            <div>
+              <div class="price-label">From</div>
+              <div class="price">€585 <small>/ half day</small></div>
+            </div>
+            <div class="boat-cta">
+              <a href="book.html?boat=trident" class="btn btn-primary">
+                Book Trident
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+              <div class="note">No payment online. We confirm by WhatsApp.</div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
       </div>
+
+    </div>
+  </section>
+
+  <section class="alt" id="rates">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Rates 2026</div>
+        <h2>Prices</h2>
+        <p>Per boat, not per person. In euros with taxes included, valid to 31 October 2026.</p>
+      </div>
+
+      <div class="rates-grid">
+        <div class="rates-card">
+          <h3>Birdy Birdy</h3>
+          <div class="rates-scroll">
+            <table class="rates-table">
+              <tbody>
+              <tr class="rates-group"><th>Half day &middot; 4 hrs</th><th>1–8 guests</th><th>9–14 guests</th><th></th></tr>
+              <tr><td>Sainte Anne Marine Park<span>No lunch</span></td><td>€585</td><td>€760</td><td></td></tr>
+              <tr><td>Mahé Coastal Discovery<span>No lunch</span></td><td>€750</td><td>€895</td><td></td></tr>
+              <tr class="rates-group"><th>Full day &middot; 8 hrs</th><th>1–8 guests</th><th>9–14 guests</th><th></th></tr>
+              <tr><td>Sainte Anne Marine Park<span>Lunch included</span></td><td>€930</td><td>€1,275</td><td></td></tr>
+              <tr><td>Mahé Island Discovery<span>Lunch included</span></td><td>€1,120</td><td>€1,480</td><td></td></tr>
+              <tr class="rates-group"><th>Fishing</th><th>1–5 guests</th><th>6–10 guests</th><th></th></tr>
+              <tr><td>Half day fishing</td><td>€780</td><td>€950</td><td></td></tr>
+              <tr><td>Full day fishing<span>Lunch included</span></td><td>€1,250</td><td>€1,500</td><td></td></tr>
+              <tr class="rates-group"><th>Island hopping</th><th>1–5</th><th>6–10</th><th>11–14</th></tr>
+              <tr><td>Praslin &amp; La Digue<span>No lunch</span></td><td>€1,300</td><td>€1,500</td><td>€1,650</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="rates-note">Soft drinks, water, snorkelling and safety gear, captain and crew included.</p>
+        </div>
+        <div class="rates-card">
+          <h3>Trident</h3>
+          <div class="rates-scroll">
+            <table class="rates-table">
+              <tbody>
+              <tr class="rates-group"><th>Half day &middot; 4 hrs</th><th>1–8 guests</th><th>9–14 guests</th></tr>
+              <tr><td>Sainte Anne Marine Park<span>No lunch</span></td><td>€585</td><td>€760</td></tr>
+              <tr><td>Mahé<span>No lunch</span></td><td>€720</td><td>€895</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="rates-note">Water, soft drinks, beers, snacks and snorkelling gear included. Half days only.</p>
+        </div>
+      </div>
+
+      <ul class="rates-fine">
+        <li><strong>Baie Ternay and sunset cruises</strong> are priced as a half day around Mahé.</li>
+        <li><strong>Marine park and landing fees</strong> are not included. Guests pay the rangers directly on the day. Cousin is cash only; Curieuse is card only.</li>
+        <li><strong>Card payments</strong> for Birdy Birdy carry a 3.8% bank transaction fee.</li>
+        <li><strong>Pick-up</strong> from somewhere other than Marine Charter, Mahé may carry a transfer fee, quoted on request.</li>
+        <li><strong>Cancellation (Trident):</strong> 50% of the rate 5–2 days before, 100% within 1 day or for a no-show. Excursions may be moved or cancelled for bad weather.</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Gallery</div>
+        <h2>On the water</h2>
+        <p>Photos from Birdy Birdy excursions.</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="g-wide"><img src="images/gal-island-cruise.jpg" alt="Birdy Birdy cruising past a forested island" loading="lazy" decoding="async" width="1200" height="675" /></figure>
+        <figure class="g-tall"><img src="images/gal-beach.jpg" alt="Birdy Birdy anchored in shallow water off a beach" loading="lazy" decoding="async" width="700" height="1244" /></figure>
+        <figure class="g-tall"><img src="images/gal-anchored.jpg" alt="Aerial view of Birdy Birdy anchored beside an island" loading="lazy" decoding="async" width="700" height="1244" /></figure>
+        <figure class="g-wide"><img src="images/gal-reef.jpg" alt="Aerial view of Birdy Birdy over a turquoise reef" loading="lazy" decoding="async" width="1200" height="675" /></figure>
+        <figure class="g-tall"><img src="images/gal-snorkel.jpg" alt="Split-level view of reef fish below the surface beside the boat" loading="lazy" decoding="async" width="700" height="1049" /></figure>
+        <figure class="g-tall"><img src="images/gal-topdown.jpg" alt="Overhead view of Birdy Birdy under way" loading="lazy" decoding="async" width="700" height="1244" /></figure>
+      </div>
+
     </div>
   </section>
 
   <section class="alt" id="contact">
     <div class="container">
+
       <div class="section-heading">
-        <h2>Get in Touch</h2>
-        <p>Have a question before booking? Reach us directly.</p>
+        <div class="eyebrow">Contact</div>
+        <h2>Questions?</h2>
+        <p>Message us on WhatsApp. We usually reply the same day.</p>
       </div>
-      <div class="contact-strip">
-        <div class="item">
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <div class="icon-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+          </div>
           <h4>Phone / WhatsApp</h4>
           <p>[PHONE NUMBER]</p>
         </div>
-        <div class="item">
+
+        <div class="contact-card">
+          <div class="icon-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2.5"></rect><path d="m3 7 9 6 9-6"></path></svg>
+          </div>
           <h4>Email</h4>
           <p>[OWNER EMAIL]</p>
         </div>
-        <div class="item">
-          <h4>Departure Point</h4>
-          <p>[MARINA / JETTY, Seychelles]</p>
+
+        <div class="contact-card">
+          <div class="icon-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <h4>Departure point</h4>
+          <p>Marine Charter, Mahé</p>
         </div>
+
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container">
-      <div>&copy; <span id="year"></span> Blue Line Charter, Seychelles</div>
-      <div class="footer-social">
+      <div class="footer-brand">
+        <img src="images/logo-light.png" alt="Blue Line Charter" />
+        <span>&copy; <span id="year"></span> Blue Line Charter, Seychelles</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
         <a href="book.html">Book Now</a>
       </div>
     </div>
@@ -105,6 +449,53 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Each hero cut is pre-cropped to the band its layout actually shows, so
+    // none of the bitrate is spent on rows that get cropped away. Pick the
+    // right one before the video loads. `media` on <source> is unreliable, so
+    // this is done in script; the markup defaults to the wide cut.
+    // Transparent header over the hero, solid once you scroll past the scrim.
+    (function () {
+      var header = document.querySelector('.site-header');
+      if (!header || !document.body.classList.contains('has-hero')) return;
+      var sync = function () {
+        header.classList.toggle('is-solid', window.scrollY > 40);
+      };
+      sync();
+      window.addEventListener('scroll', sync, { passive: true });
+    })();
+
+    (function () {
+      var v = document.querySelector('.hero-media');
+      if (!v || !window.matchMedia) return;
+      var narrow = window.matchMedia('(max-width: 767px)').matches;
+      var still = document.querySelector('.hero-still');
+
+      // Swap to a full-resolution photo when the video can't run: reduced
+      // motion, or autoplay refused (Low Power Mode, data saver, site
+      // autoplay settings). The video stays up until the photo has loaded.
+      var useStill = function () {
+        v.pause();
+        still.onload = function () { document.querySelector('.hero').classList.add('is-still'); };
+        still.src = narrow ? still.dataset.srcTall : still.dataset.srcWide;
+      };
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        v.removeAttribute('autoplay');
+        v.preload = 'none';
+        useStill();
+        return;
+      }
+
+      if (narrow) {
+        v.poster = v.dataset.posterTall;
+        v.querySelector('source').src = v.dataset.srcTall;
+        v.load();
+      }
+
+      var p = v.play();
+      if (p && p.catch) p.catch(function (e) { if (e.name === 'NotAllowedError') useStill(); });
+    })();
   </script>
 </body>
 </html>

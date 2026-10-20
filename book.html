@@ -4,126 +4,237 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Book Now | Blue Line Charter</title>
-  <meta name="description" content="Request a boat charter booking with Blue Line Charter, Seychelles. We'll confirm availability by email or WhatsApp." />
+  <meta name="description" content="Request a private boat excursion from Mahé with Blue Line Charter. Send your date and group size and we confirm availability by email or WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html"><span class="brand-mark">&#9875;</span> Blue Line Charter</a>
+      <a class="brand" href="index.html"><img src="images/logo-light.png" alt="Blue Line Charter" /></a>
       <ul class="nav-links">
-        <li><a href="index.html#boats">Our Boats</a></li>
+        <li><a href="index.html#excursions">Excursions</a></li>
+        <li><a href="index.html#boats">Boats</a></li>
+        <li><a href="index.html#rates">Prices</a></li>
         <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="book.html" class="btn btn-primary">Book Now</a></li>
+        <li class="nav-cta"><a href="book.html" class="btn btn-primary btn-sm">Book Now</a></li>
       </ul>
     </div>
   </header>
 
-  <section>
+  <section class="alt">
     <div class="container">
+
       <div class="section-heading">
-        <h2>Book Now</h2>
-        <p>Tell us your preferred date, time and boat. We'll confirm availability by email or WhatsApp.</p>
+        <div class="eyebrow">Booking request</div>
+        <h1 style="font-size: 40px; line-height: 1.12; color: var(--navy); font-weight: 700; margin-bottom: 12px;">Tell us your dates</h1>
+        <p>Send the form and we'll confirm availability by email or WhatsApp. You don't pay anything here.</p>
       </div>
 
-      <div class="booking-wrap">
-        <!--
-          Netlify Forms: this form is detected at deploy time by scanning
-          the static HTML for name + data-netlify="true". After the first
-          deploy, go to Site settings > Forms > Notifications and add an
-          email notification pointing at the owner's inbox, or submissions
-          will be captured silently with nobody emailed.
-        -->
-        <form
-          name="booking"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          action="/thanks.html"
-        >
-          <input type="hidden" name="form-name" value="booking" />
-          <p class="honeypot-field">
-            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-          </p>
+      <div class="booking-layout">
 
-          <div class="form-row">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
+        <div class="booking-form">
+          <!--
+            Netlify Forms: detected at deploy time by scanning the static HTML
+            for name + data-netlify="true". After the first deploy, go to
+            Site settings > Forms > Notifications and add an email notification
+            pointing at the owner's inbox, or submissions are captured silently
+            with nobody emailed.
+          -->
+          <form
+            name="booking"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            action="/thanks.html"
+          >
+            <input type="hidden" name="form-name" value="booking" />
+            <p class="honeypot-field">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
 
-          <div class="form-row form-row-split">
-            <div>
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required />
+            <div class="form-stack">
+
+              <div>
+                <label for="boat">Boat</label>
+                <select id="boat" name="boat" required>
+                  <option value="Birdy Birdy">Birdy Birdy (catamaran, half and full days)</option>
+                  <option value="Trident">Trident (8.8 m hardtop, half days around Mahé)</option>
+                  <option value="No preference">No preference (whichever is free)</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+
+              <div class="form-split">
+                <div>
+                  <label for="email">Email address</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                </div>
+                <div>
+                  <label for="phone">Phone / WhatsApp</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+248 ..." required />
+                </div>
+              </div>
+
+              <div class="form-split">
+                <div>
+                  <label for="date">Preferred date</label>
+                  <input type="date" id="date" name="date" required />
+                </div>
+                <div>
+                  <label for="excursion">Excursion</label>
+                  <select id="excursion" name="excursion" required>
+                    <option value="Sainte Anne Marine Park, half day" data-key="ste-anne">Sainte Anne Marine Park, half day</option>
+                    <option value="Sainte Anne Marine Park, full day" data-birdy-only>Sainte Anne Marine Park, full day</option>
+                    <option value="Baie Ternay Marine Park, half day" data-key="ternay">Baie Ternay Marine Park, half day</option>
+                    <option value="Baie Ternay Marine Park, full day" data-birdy-only>Baie Ternay Marine Park, full day</option>
+                    <option value="Around Mahé, half day" data-key="mahe">Around Mahé, half day</option>
+                    <option value="Around Mahé, full day" data-birdy-only>Around Mahé, full day</option>
+                    <option value="Fishing, half day" data-key="fishing" data-birdy-only>Fishing, half day</option>
+                    <option value="Fishing, full day" data-birdy-only>Fishing, full day</option>
+                    <option value="Praslin &amp; La Digue" data-key="islands" data-birdy-only>Praslin &amp; La Digue, full day</option>
+                    <option value="Sunset cruise" data-key="sunset">Sunset cruise</option>
+                    <option value="Custom">Something else (tell us below)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <span class="field-label">Departure time</span>
+                <div class="time-options">
+                  <input type="radio" id="t0800" name="time" value="8:00 AM" />
+                  <label for="t0800">8:00 AM</label>
+
+                  <input type="radio" id="t1000" name="time" value="10:00 AM" checked />
+                  <label for="t1000">10:00 AM</label>
+
+                  <input type="radio" id="t1200" name="time" value="12:00 PM" />
+                  <label for="t1200">12:00 PM</label>
+
+                  <input type="radio" id="t1400" name="time" value="2:00 PM" />
+                  <label for="t1400">2:00 PM</label>
+
+                  <input type="radio" id="t1600" name="time" value="4:00 PM" />
+                  <label for="t1600">4:00 PM</label>
+                </div>
+              </div>
+
+              <div class="form-split">
+                <div>
+                  <label for="adults">Adults</label>
+                  <input type="number" id="adults" name="adults" min="1" value="2" required />
+                </div>
+                <div>
+                  <label for="children">Children</label>
+                  <input type="number" id="children" name="children" min="0" value="0" />
+                </div>
+              </div>
+
+              <div>
+                <label for="message">Anything else? <span class="optional">(optional)</span></label>
+                <textarea id="message" name="message" placeholder="Where you'd like to go, ages of children, or where you're staying if you need a pick-up."></textarea>
+              </div>
+
+              <div class="submit-row">
+                <button type="submit" class="btn btn-primary">Request booking</button>
+                <span class="note">No payment now. We confirm first.</span>
+              </div>
+
             </div>
+          </form>
+        </div>
+
+        <aside class="booking-summary">
+          <img src="images/boat-main.jpg" alt="Birdy Birdy" data-summary="img" />
+          <div class="booking-summary-body">
             <div>
-              <label for="phone">Phone / WhatsApp</label>
-              <input type="tel" id="phone" name="phone" required />
+              <div class="eyebrow" style="margin-bottom: 4px;">You're booking</div>
+              <h3 data-summary="name">Birdy Birdy</h3>
+              <div class="sub" data-summary="sub">Power catamaran &middot; up to 14 guests</div>
+            </div>
+            <ul class="summary-list">
+              <li>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+                Private: only your group on board
+              </li>
+              <li>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+                Skipper included
+              </li>
+              <li>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f8fd6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+                Departure from Marine Charter, Mahé
+              </li>
+            </ul>
+            <div class="summary-price">
+              <span class="sub">From</span>
+              <span class="price">€585 <small>/ half day</small></span>
             </div>
           </div>
+        </aside>
 
-          <div class="form-row">
-            <label for="boat">Which Boat</label>
-            <select id="boat" name="boat" required>
-              <option value="">Select a boat</option>
-              <option value="[BOAT 1 NAME]">[BOAT 1 NAME]</option>
-              <option value="[BOAT 2 NAME]">[BOAT 2 NAME]</option>
-              <option value="Not sure">Not sure — recommend one</option>
-            </select>
-          </div>
-
-          <div class="form-row form-row-split">
-            <div>
-              <label for="date">Preferred Date</label>
-              <input type="date" id="date" name="date" required />
-            </div>
-            <div>
-              <label for="time">Preferred Trip Time</label>
-              <select id="time" name="time" required>
-                <option value="">Select a time</option>
-                <option value="8:00 AM">8:00 AM</option>
-                <option value="10:00 AM">10:00 AM</option>
-                <option value="12:00 PM">12:00 PM</option>
-                <option value="2:00 PM">2:00 PM</option>
-                <option value="4:00 PM">4:00 PM</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-row form-row-split">
-            <div>
-              <label for="adults">Adults</label>
-              <input type="number" id="adults" name="adults" min="1" value="1" required />
-            </div>
-            <div>
-              <label for="children">Children</label>
-              <input type="number" id="children" name="children" min="0" value="0" />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <label for="message">Message (optional)</label>
-            <textarea id="message" name="message" placeholder="Anything else we should know?"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Request Booking</button>
-        </form>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container">
-      <div>&copy; <span id="year"></span> Blue Line Charter, Seychelles</div>
-      <div class="footer-social">
+      <div class="footer-brand">
+        <img src="images/logo-light.png" alt="Blue Line Charter" />
+        <span>&copy; <span id="year"></span> Blue Line Charter, Seychelles</span>
+      </div>
+      <div class="footer-links">
         <a href="index.html">Home</a>
+        <a href="book.html">Book Now</a>
       </div>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Keep the summary card in step with the chosen boat, preselect boat and
+    // excursion from ?boat= / ?excursion= on the homepage links, and only
+    // offer Birdy Birdy's full days, fishing and island hopping when that
+    // boat (or either) can do them. Trident only runs half days around Mahé.
+    (function () {
+      var boats = {
+        'Birdy Birdy': { img: 'images/boat-main.jpg', sub: 'Power catamaran &middot; up to 14 guests' },
+        'Trident': { img: 'images/trident-main.jpg', sub: '8.8 m hardtop cruiser &middot; up to 14 guests' },
+        'No preference': { img: 'images/boat-main.jpg', name: 'Either boat', sub: 'Birdy Birdy or Trident &middot; up to 14 guests' }
+      };
+      var slugs = { 'birdy-birdy': 'Birdy Birdy', 'trident': 'Trident' };
+      var select = document.getElementById('boat');
+      var trip = document.getElementById('excursion');
+      var params = new URLSearchParams(location.search);
+      var q = params.get('boat');
+      if (slugs[q]) select.value = slugs[q];
+      else if (params.get('excursion')) select.value = 'No preference';
+      var pick = trip.querySelector('[data-key="' + params.get('excursion') + '"]');
+      if (pick) trip.value = pick.value;
+
+      var sync = function () {
+        var b = boats[select.value];
+        var img = document.querySelector('[data-summary="img"]');
+        img.src = b.img;
+        img.alt = b.name || select.value;
+        document.querySelector('[data-summary="name"]').textContent = b.name || select.value;
+        document.querySelector('[data-summary="sub"]').innerHTML = b.sub;
+
+        var trident = select.value === 'Trident';
+        trip.querySelectorAll('[data-birdy-only]').forEach(function (o) { o.disabled = trident; });
+        if (trip.selectedOptions[0].disabled) trip.selectedIndex = 0;
+      };
+      select.addEventListener('change', sync);
+      sync();
+    })();
   </script>
 </body>
 </html>
