@@ -294,13 +294,12 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
 
 /* ---------- Boat card ---------- */
 
+.boat-card .btn { border-radius: 0; }
+
 .boat-card {
   display: flex;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
+  border-top: 1.5px solid var(--navy);
   overflow: hidden;
-  background: var(--white);
-  box-shadow: var(--shadow-card);
 }
 
 .boat-gallery {
@@ -323,6 +322,8 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
   height: 172px;
 }
 .boat-gallery-thumbs img { width: 100%; height: 100%; object-fit: cover; }
+/* Keep the snorkelling thumb on the boat, not the sky. */
+#birdy-birdy .boat-gallery-thumbs img:last-child { object-position: 50% 92%; }
 
 .gallery-badge {
   position: absolute;
@@ -338,12 +339,11 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 7px 12px;
-  border-radius: 999px;
 }
 
 .boat-detail {
   flex: 1;
-  padding: 36px 40px 32px;
+  padding: 28px 40px 32px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -370,7 +370,6 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
   font-size: 13.5px;
   font-weight: 600;
   padding: 8px 13px;
-  border-radius: 999px;
 }
 
 .boat-blurb { color: var(--text-body); font-size: 16px; line-height: 1.65; margin: 0; text-wrap: pretty; }
@@ -415,23 +414,19 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
 .excursion-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  gap: 40px 24px;
 }
 
-.excursion {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 22px 22px 18px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  background: var(--white);
-  box-shadow: var(--shadow-card);
-}
+/* Square photo on top, text straight on the page below it: no box or shadow. */
+.excursion { display: flex; flex-direction: column; gap: 14px; }
 
-.excursion h3 { font-size: 20px; line-height: 1.2; color: var(--navy); font-weight: 700; margin: 0; }
+.excursion-photo { aspect-ratio: 1 / 1; overflow: hidden; background: var(--blue-light); margin-bottom: 6px; }
+.excursion-photo img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.excursion:hover .excursion-photo img { transform: scale(1.05); }
 
-.excursion-meta { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 14px; color: var(--text-muted); }
+.excursion h3 { font-size: 24px; line-height: 1.2; letter-spacing: -0.01em; color: var(--navy); font-weight: 700; margin: 0; }
+
+.excursion-meta { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14px; color: var(--text-muted); }
 .excursion-meta li { display: flex; align-items: center; gap: 7px; }
 .excursion-meta svg { flex: none; }
 
@@ -442,7 +437,7 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
   align-items: baseline;
   gap: 8px;
   padding-top: 14px;
-  border-top: 1px solid var(--border);
+  border-top: 1.5px solid var(--navy);
 }
 .excursion-foot .price-label { margin: 0; }
 .excursion-foot .price { font-size: 22px; }
@@ -456,8 +451,22 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
 .excursion-day ol { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 6px; color: var(--text-body); line-height: 1.5; }
 .excursion-day ol b { display: block; font-size: 12.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); }
 .excursion-day .excursion-day-note { margin-top: 12px; color: var(--text-muted); line-height: 1.5; }
-.excursion-link { margin-left: auto; font-weight: 600; font-size: 15px; }
-.excursion-link::after { content: " \2192"; }
+.excursion-link {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.excursion-link::after { content: "\2192"; transition: transform 0.2s ease; }
+.excursion-link:hover { background: var(--blue); color: var(--white); }
+.excursion-link:hover::after { transform: translateX(3px); }
 
 /* ---------- Rates ---------- */
 
@@ -471,8 +480,6 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
 .rates-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
   padding: 24px 24px 20px;
 }
 
@@ -522,7 +529,6 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
 .gallery figure {
   margin: 0;
   overflow: hidden;
-  border-radius: 12px;
   background: var(--blue-light);
   grid-row: span 2;
 }
@@ -539,8 +545,8 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
 .g-wide { grid-column: span 2; }
 
 @media (prefers-reduced-motion: reduce) {
-  .gallery img { transition: none; }
-  .gallery figure:hover img { transform: none; }
+  .gallery img, .excursion-photo img, .excursion-link, .excursion-link::after { transition: none; }
+  .gallery figure:hover img, .excursion:hover .excursion-photo img { transform: none; }
 }
 
 /* ---------- Contact ---------- */
@@ -554,7 +560,6 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
 .contact-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 14px;
   padding: 26px;
   display: flex;
   flex-direction: column;
@@ -565,7 +570,6 @@ section.alt { background: var(--sand); padding: 80px 0 88px; }
   width: 42px;
   height: 42px;
   flex-shrink: 0;
-  border-radius: 999px;
   background: var(--blue-light);
   display: flex;
   align-items: center;
